@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #bbff00;
+    overflow: hidden;
+}
+.wrapper{
+    position: relative;
+    background: #fff;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+.imgBox,.cardDetails{
+    width: 50%;
+}
+.imgBox{
+    position: relative;
+    background: #222;
+    opacity: 0.95;
+}
+.imgBox::after{
+    position: absolute;
+    content: 'JORDAN';
+    font-size: 5em;
+    font-weight: 900;
+    bottom: 0;
+    color: #ffffff;
+    opacity: 0.03;
+}
+.wrapper img{
+    position: absolute;
+    height: 90%;
+    width: 80%;
+    left: -170px;
+    top: 7px;
+    object-fit: cover;
+    transform: rotate(-20deg);
+}
+.content{
+    padding: 50px;
+}
+h2{
+    text-transform: uppercase;
+    font-size: 2.2em;
+    color: #b0dd33;
+}
+h2 span{
+    display: block;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 0.45em;
+    letter-spacing: 3px;
+    color: #222;
+    line-height: -3px;
+    opacity: 0.7;
+}
+p{
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-top: 15px;
+    text-align: justify;
+}
+.buying{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+h3{
+    font-size: 1.8em;
+    opacity: 0.7;
+}
+button{
+    border: none;
+    padding: 10px 25px;
+    color: #000000;
+    background-color: #b8f119;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+button:hover{
+    transform: scaleX(1.1);
+    cursor: pointer;
+    background-color: #222;
+    color: #b0dd33;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 830px){
+    body{
+        padding: 0 30px;
+    }
+    .wrapper{
+        height: 700px;
+        flex-direction: column;
+    }
+    .imgBox,.cardDetails{
+        width: 100%;
+        height: 60%;
+    }
+    .wrapper img{
+        height: 70%;
+        left: 60px;
+        top: -30px;
+        transform: rotate(6deg);
+    }
+    .imgBox::after{
+        font-size: 23vw;
+        left: 5%;
+        top: -30px;
+    }
+}
